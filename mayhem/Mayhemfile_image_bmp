@@ -1,0 +1,9 @@
+project: savantenvs/etlegacy
+target: image_bmp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/image_bmp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_image_bmp @@
+    afl: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/etlegacy
+target: image_pcx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/image_pcx/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_image_pcx
+    libfuzzer: true
+    timeout: 10

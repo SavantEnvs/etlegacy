@@ -1,0 +1,5 @@
+# build outputs of mayhem/build.sh and upstream CMake build dirs (gitignored: /build*/)
+build*/
+fuzz_*
+etl_selftest
+ctrf-report.json

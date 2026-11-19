@@ -1,0 +1,9 @@
+project: savantenvs/etlegacy
+target: cm_load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cm_load/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cm_load @@
+    afl: true
+    timeout: 10

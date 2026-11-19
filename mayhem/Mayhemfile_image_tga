@@ -1,0 +1,9 @@
+project: savantenvs/etlegacy
+target: image_tga
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/image_tga/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_image_tga
+    libfuzzer: true
+    timeout: 10
